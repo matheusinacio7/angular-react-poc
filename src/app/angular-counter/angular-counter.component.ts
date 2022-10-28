@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CounterService } from '../counter.service';
+import { CounterService } from '../counter-service/counter.service';
 
 @Component({
   selector: 'app-angular-counter',
