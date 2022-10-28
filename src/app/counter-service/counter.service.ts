@@ -9,10 +9,10 @@ export class CounterService {
   public readonly counter$ = this.counterSubject.asObservable();
 
   public increase(count: number) {
-    this.counterSubject.next(this.counterSubject.value + count);
+    this.counterSubject.next(this.counterSubject.value + Math.abs(count));
   }
 
   public decrease(count: number) {
-    this.counterSubject.next(Math.max(this.counterSubject.value - count, 0));
+    this.counterSubject.next(Math.max(this.counterSubject.value - Math.abs(count), 0));
   }
 }
